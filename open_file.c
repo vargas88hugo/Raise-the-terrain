@@ -12,15 +12,14 @@ void open_file(grid **map, char *str)
 	ssize_t line_size = 0;
 	FILE *fp = fopen(str, "r");
 
-	(*map)->alt = malloc(sizeof(int) * 64);
-	line_size = getline(&line_buf, &line_buf_size, fp);
-	token = strtok(line_buf, " ");
-
-	if (token == NULL || fp == NULL)
+	if (fp == NULL)
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", str);
 		exit(EXIT_FAILURE);
 	}
+	(*map)->alt = malloc(sizeof(int) * 64);
+	line_size = getline(&line_buf, &line_buf_size, fp);
+	token = strtok(line_buf, " ");
 
 	for (i = 0; token; i++)
 	{
