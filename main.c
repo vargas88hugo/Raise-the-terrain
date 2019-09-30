@@ -50,6 +50,7 @@ int main(int argc, char **argv)
  * draw_iso - function that manages the draw of the isometric grid
  * @instance: SDL instance
  * @map: grid struct
+ * @str: argument string
  */
 void draw_iso(SDL_Instance *instance, grid **map, char *str)
 {

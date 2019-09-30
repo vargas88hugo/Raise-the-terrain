@@ -14,4 +14,5 @@ void free_all(grid *map)
 	free(map->alt);
 	free(map->p);
 	free(map);
+	map = NULL;
 }
