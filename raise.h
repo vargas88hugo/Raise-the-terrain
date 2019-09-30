@@ -16,6 +16,7 @@
  * struct grid - grid struct
  * @center: center of the grid
  * @p: matrix of points
+ * @alt: array of altitudes
  * @angle: angle of rotation
  *
  * Description: grid struct of the matrix of
@@ -25,7 +26,7 @@ typedef struct grid
 {
 	SDL_Point center;
 	SDL_Point **p;
-        int *alt;
+	int *alt;
 	float angle;
 } grid;
 
